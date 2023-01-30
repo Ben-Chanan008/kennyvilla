@@ -1,0 +1,71 @@
+@font-face {
+    font-family: "sofia-sans";
+    src: url("./Sofia sans/SofiaSans-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: 'sofia-sans', 'monospace';
+    margin: 0;
+    padding: 0;
+    /* background-color: #f4f4f4; */
+    color: #000;
+}
+
+.container-1 ul li{
+    list-style-type: none;
+}
+
+.nav-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #ffff;
+    box-shadow: 30px 20px 30px rgba(0,0,0,.1);
+    min-height: 7vh;
+    padding: 20px;
+}
+
+.uls li{
+    padding-right: 10px;
+}
+
+section{
+    background-color: #000;
+    color: #fff;
+    padding: 40px;
+    min-height: 500px;
+}
+
+section p, h2 {
+    color: #fff;
+}
+
+section img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.second-child{
+    display: flex;
+    flex-direction: row;
+}
+
+.second-child img{
+    padding-right: 5px;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 0;
+    padding: 0;
+    gap: 200px;
+}
+
+.border-in{
+    border: 3px solid #fff;
+    padding: 40px;
+    font-size: 20px;
+}
