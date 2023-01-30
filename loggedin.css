@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+* {
+	font-family: 'lato', 'monospace';
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	padding: 20px;
+}
+
+.searched {
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+	padding: 20px;
+	border-radius: 50px;
+	width: 70vw;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	align-items: center;
+	justify-content: center;
+}
+
+.searched input {
+	width: 60vw;
+	border: none;
+	font-size: 16px;
+	border-left: 1px solid #f4f4f4;
+}
+
+.searched input:focus {
+	outline: none;
+}
+
+.searched .fa-grip-lines {
+	margin-left: 50px;
+}
+
+.sect > *:first-child {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px;
+	padding: 20px;
+}
+
+.cards > div {
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+	padding: 20px;
+	border-radius: 7px;
+}
+
+.cards > div p i {
+	margin-right: 5px;
+}
+
+.cards2 > div p i {
+	margin-right: 5px;
+}
+
+.sect .cards {
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 20px;
+	gap: 10px;
+}
+
+.sect .cards2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 20px 20px;
+	gap: 10px;
+}
+
+.sect .cards2 > div {
+	margin: auto;
+}
+
+.sect .cards2 img {
+	width: 500px;
+	/*height: ;*/
+}
+
+.sect img {
+	width: 250px;
+	height: 200px;
+	object-fit: cover;
+	border-radius: 15px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+}
+
+.span {
+	color: #ff7f50;
+}
+
+.span > span {
+	color: #ccc;
+}
+
+footer {
+	background-color: #fff;
+	color: #000;
+	/*box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);*/
+	position: absolute;
+	display: flex;
+	/*bottom: -700px;*/
+	width: 100vw;
+	/*margin: 0;*/
+	padding: 20px;
+}
+
+footer > div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10px;
+	margin: auto;
+	padding-right: 200px;
+}
+
+footer i {
+	margin-bottom: 10px;
+}
