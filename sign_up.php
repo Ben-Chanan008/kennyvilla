@@ -1,7 +1,6 @@
 <?php
-$name = $email = $passcode = '';
+		include 'database.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,9 +54,7 @@ $name = $email = $passcode = '';
 			msg3.innerHTML = 'Please fill in field';
         } else if(name.value !== '' && email.value !== '' && password.value === '') {
 			msg3.innerHTML = 'Please fill in field with maximum of 16';
-		} else if(name.value !== '' && email.value === '' && password.value !== '') {
-			msg2.innerHTML = 'Please fill in field';
-		}  else if(name.value === '' && email.value !== '' && password.value !== '') {
+		} else if(name.value === '' && email.value !== '' && password.value !== '') {
 			msg.innerHTML = 'Please fill in field';
 		}
 
@@ -67,11 +64,24 @@ $name = $email = $passcode = '';
 			} else{
 				msg4.classList.add('extra');
 				msg4.innerHTML = 'Passwords match';
-				location.href = './logged_in.php'
 			}		
 		}
     }
-
+	<?php
+		$name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+		$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+		$passcode = filter_input(INPUT_POST, 'passcode', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+		if(isset($_POST['submit'])) {
+			if(!empty($name) && !empty($email) && !empty($passcode)){
+				$sql = "INSERT INTO user(name, email, password) VALUES('$name', '$email', '$passcode')";
+				if(mysqli_query($conn, $sql)){
+					header('Location: logged_in.php');
+				} else{
+					echo 'Error' . mysqli_error($conn);
+				}
+			}
+		}
+	?>
 </script>
 </body>
 </html>
