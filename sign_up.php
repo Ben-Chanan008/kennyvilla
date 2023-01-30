@@ -54,20 +54,24 @@ $name = $email = $passcode = '';
 			msg2.innerHTML = 'Please fill in field';
 			msg3.innerHTML = 'Please fill in field';
         } else if(name.value !== '' && email.value !== '' && password.value === '') {
-			msg3.innerHTML = 'Please fill in field';
+			msg3.innerHTML = 'Please fill in field with maximum of 16';
 		} else if(name.value !== '' && email.value === '' && password.value !== '') {
 			msg2.innerHTML = 'Please fill in field';
 		}  else if(name.value === '' && email.value !== '' && password.value !== '') {
 			msg.innerHTML = 'Please fill in field';
 		}
 
-		if(rePassword.value !== password.value){
-			msg4.innerHTML = 'Passwords do not match';
-		} else{
-			msg4.classList.add('extra');
-			msg4.innerHTML = 'Passwords match';
+		if(name.value !== '' && email.value !== '' && password.value !== ''){
+			if(rePassword.value.length !== password.value.length){
+				msg4.innerHTML = 'Passwords do not match';
+			} else{
+				msg4.classList.add('extra');
+				msg4.innerHTML = 'Passwords match';
+				location.href = './logged_in.php'
+			}		
 		}
     }
+
 </script>
 </body>
 </html>
