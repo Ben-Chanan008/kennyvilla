@@ -23,6 +23,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	background-color: #fff;
+	width: 100vw;
 	border-top-right-radius: 20px;
 	border-top-left-radius: 20px;
 	animation: slideUp .8s ease-in-out ;
