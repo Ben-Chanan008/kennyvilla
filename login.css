@@ -54,3 +54,7 @@ input[type*='submit'] {
 	color: #fff;
 	border-radius: 15px;
 }
+
+.extra{
+	color: #008000;
+}

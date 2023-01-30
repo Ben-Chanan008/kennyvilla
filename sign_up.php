@@ -19,15 +19,16 @@ $name = $email = $passcode = '';
 		<div class="form-group">
 			<label for="name">Username</label>
 			<input id="name" type="text" name="name" placeholder=""/>
-			<div class="msg" style="color: #ff0000; font-size:30px; font-weight:bold;"></div>
+			<div class="msg" style="color: #ff0000; font-weight:bold;"></div>
 			<label for="email">Email</label>
 			<input id="email" type="text" name="email"/>
-			<div class="msg2" style="color: #ff0000; font-size:30px; font-weight:bold;"></div>
+			<div class="msg2" style="color: #ff0000;  font-weight:bold;"></div>
 			<label for="password">Password</label>
 			<input type="password" id="password" name="passcode"/>
-			<div class="msg3" style="color: #ff0000; font-size:30px; font-weight:bold;"></div>
+			<div class="msg3" style="color: #ff0000; font-weight:bold;"></div>
 			<label for="confirm_password">Re-Password</label>
 			<input type="password" id="confirm_password" name="passcode"/>
+			<div class="msg4" style="color: #ff0000; font-weight:bold;"></div>
 			<input type="submit" value="Sign Up" name="submit">
 			<div class="login">
 				<p>Already have an account? <span><a href="login.php">Log in</a></span></p>
@@ -42,6 +43,7 @@ $name = $email = $passcode = '';
     const msg = document.querySelector('.msg');
     const msg2 = document.querySelector('.msg2');
     const msg3 = document.querySelector('.msg3');
+	const msg4 = document.querySelector('.msg4');
     const formGroup = document.querySelector('.my-form');
     formGroup.addEventListener('submit', validate)
     function validate(e){
@@ -51,8 +53,19 @@ $name = $email = $passcode = '';
             msg.innerHTML = 'Please fill in field';
 			msg2.innerHTML = 'Please fill in field';
 			msg3.innerHTML = 'Please fill in field';
-        } else{
-			return;
+        } else if(name.value !== '' && email.value !== '' && password.value === '') {
+			msg3.innerHTML = 'Please fill in field';
+		} else if(name.value !== '' && email.value === '' && password.value !== '') {
+			msg2.innerHTML = 'Please fill in field';
+		}  else if(name.value === '' && email.value !== '' && password.value !== '') {
+			msg.innerHTML = 'Please fill in field';
+		}
+
+		if(rePassword.value !== password.value){
+			msg4.innerHTML = 'Passwords do not match';
+		} else{
+			msg4.classList.add('extra');
+			msg4.innerHTML = 'Passwords match';
 		}
     }
 </script>
