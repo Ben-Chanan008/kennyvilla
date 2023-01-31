@@ -114,8 +114,10 @@
 			<span>Chat Host</span>
 		</div>
 		<div>
-			<i class="fa-solid fa-user"></i>
-			<span>Profile</span>
+			<a href="./profile.php">
+				<i class="fa-solid fa-user"></i>
+				<span>Profile</span>
+			</a>
 		</div>
 	</footer>
 	<script>

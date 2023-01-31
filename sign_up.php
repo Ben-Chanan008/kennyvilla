@@ -1,5 +1,5 @@
 <?php
-	$nameErr = $emailErr = $passcodeErr = '';
+	$nameErr = $emailErr = $passcodeErr = $loginErr = '';
 	
 	include 'database.php';
 
@@ -7,7 +7,7 @@
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $passcode = filter_input(INPUT_POST, 'passcode', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$re_passcode = filter_input(INPUT_POST, 'repasscode', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-    $sql = "INSERT INTO user(username, password, email) VALUES('$name', '$passcode', '$email')";
+    //$sql = "INSERT INTO user(username, password, email) VALUES('$name', '$passcode', '$email')";
     if(isset($_POST['submit'])){
 		if(empty($_POST['name']) && empty($_POST['email']) && empty($_POST['passcode'])){
 			$nameErr = $emailErr = $passcodeErr = 'Please fill in fields';
@@ -22,11 +22,11 @@
 		// 	if($passcode->value === $re_passcode->value);
 		// }
 		if(empty($nameErr) && empty($emailErr) && empty($passcodeErr)){
-			$query = "INSERT INTO user(username, password, email) VALUES('$name', '$passcode', '$email')";
+			$sql = "INSERT INTO user(username, password, email) VALUES('$name', '$passcode', '$email')";
 			if(mysqli_query($conn, $sql)){
 				header('Location: ./logged_in.php');
 			} else{
-				echo 'Error:'. mysqli_error($conn); 
+				$loginErr = 'Incorrect name or password';
 			}
 		}
 	}
