@@ -8,7 +8,7 @@
 }
 
 body{
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 header {
@@ -71,6 +71,7 @@ header {
 	justify-content: space-between;
 	margin: 20px 20px;
 	gap: 10px;
+	overflow-x: auto;
 }
 
 .sect .cards2 {

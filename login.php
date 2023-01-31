@@ -1,3 +1,10 @@
+<?php
+	include './database.php';
+	
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+	$passcode = filter_input(INPUT_POST, 'passcode', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +14,7 @@
 	<link rel="stylesheet" href="login.css">
 </head>
 <body>
-	<form action="" method="POST">
+	<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'])?>" method="POST">
 		<div>
 			<h1 style="color: #fff">Login</h1>
 		</div>

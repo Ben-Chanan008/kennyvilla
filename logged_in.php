@@ -30,28 +30,28 @@
 			<span class="span">View all</span>
 		</div>
 		<div class="cards">
-			<div>
+			<div class="1">
 				<img src="./pool.jpg" alt="resort1"/>
 				<p>Pool resort</p>
 				<span class="span">$5000 <span>night</span></span>
 				<p><i class="fa-sharp fa-solid fa-location-dot"></i>Lekki St, Lagos Abuja</p>
 				<p><i class="fa-solid fa-layer-group"></i>Vanilla Island, Finderson</p>
 			</div>
-			<div>
+			<div class="2">
 				<img src="./JW_LosCabos_2015_MainExterior.webp" alt="resort1"/>
 				<p>Pool resort</p>
 				<span class="span">$5000 <span>night</span></span>
 				<p><i class="fa-sharp fa-solid fa-location-dot"></i>Lekki St, Lagos Abuja</p>
 				<p><i class="fa-solid fa-layer-group"></i>Vanilla Island, Finderson</p>
 			</div>
-			<div>
+			<div class="3">
 				<img src="./canada.jpg" alt="resort1"/>
 				<p>Pool resort</p>
 				<span class="span">$5000 <span>night</span></span>
 				<p><i class="fa-sharp fa-solid fa-location-dot"></i>Lekki St, Lagos Abuja</p>
 				<p><i class="fa-solid fa-layer-group"></i>Vanilla Island, Finderson</p>
 			</div>
-			<div>
+			<div class="4">
 				<img src="./mati.jpg" alt="resort1"/>
 				<p>Pool resort</p>
 				<span class="span">$5000 <span>night</span></span>
@@ -117,7 +117,21 @@
 			<i class="fa-solid fa-user"></i>
 			<span>Profile</span>
 		</div>
-	
 	</footer>
+	<script>
+		// const width = document.querySelector('.cards').clientWidth;
+		// const arr = [];
+		// let i = 0;
+		// let time = 3000;
+
+		// arr[0] = document.querySelector('.1');
+		// arr[1] = document.querySelector('.2');
+		// arr[2] = document.querySelector('.3');
+		// arr[3] = document.querySelector('.4');
+
+		// function changeItem(){
+			
+		// }
+	</script>
 </body>
 </html>
