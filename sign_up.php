@@ -65,39 +65,39 @@
 		</div>
 	</form>
 	<script>
-    // const name = document.querySelector('#name');
-    // const password = document.querySelector('#password');
-    // const email = document.querySelector('#email');
-    // const rePassword = document.querySelector('#confirm_password');
-    // const msg = document.querySelector('.msg');
-    // const msg2 = document.querySelector('.msg2');
-    // const msg3 = document.querySelector('.msg3');
-	// const msg4 = document.querySelector('.msg4');
-    // const formGroup = document.querySelector('.my-form');
-    // formGroup.addEventListener('submit', validate)
-    // function validate(e){
-	// 	e.preventDefault();
+    const name = document.querySelector('#name');
+    const password = document.querySelector('#password');
+    const email = document.querySelector('#email');
+    const rePassword = document.querySelector('#confirm_password');
+    const msg = document.querySelector('.msg');
+    const msg2 = document.querySelector('.msg2');
+    const msg3 = document.querySelector('.msg3');
+	const msg4 = document.querySelector('.msg4');
+    const formGroup = document.querySelector('.my-form');
+    formGroup.addEventListener('submit', validate)
+    function validate(e){
+		e.preventDefault();
 
-    //     if(name.value === '' && email.value === '' && password.value === '') {
-    //         msg.innerHTML = 'Please fill in field';
-	// 		msg2.innerHTML = 'Please fill in field';
-	// 		msg3.innerHTML = 'Please fill in field';
-    //     } else if(name.value !== '' && email.value !== '' && password.value === '') {
-	// 		msg3.innerHTML = 'Please fill in field with maximum of 16';
-	// 	} else if(name.value === '' && email.value !== '' && password.value !== '') {
-	// 		msg.innerHTML = 'Please fill in field';
-	// 	}
+        if(name.value === '' && email.value === '' && password.value === '') {
+            msg.innerHTML = 'Please fill in field';
+			msg2.innerHTML = 'Please fill in field';
+			msg3.innerHTML = 'Please fill in field';
+        } else if(name.value !== '' && email.value !== '' && password.value === '') {
+			msg3.innerHTML = 'Please fill in field with maximum of 16';
+		} else if(name.value === '' && email.value !== '' && password.value !== '') {
+			msg.innerHTML = 'Please fill in field';
+		}
 
-	// 	if(name.value !== '' && email.value !== '' && password.value !== ''){
-	// 		if(rePassword.value.length !== password.value.length){
-	// 			msg4.innerHTML = 'Passwords do not match';
-	// 		} else{
-	// 			msg4.classList.add('extra');
-	// 			msg4.innerHTML = 'Passwords match';
+		if(name.value !== '' && email.value !== '' && password.value !== ''){
+			if(rePassword.value.length !== password.value.length){
+				msg4.innerHTML = 'Passwords do not match';
+			} else{
+				msg4.classList.add('extra');
+				msg4.innerHTML = 'Passwords match';
 					
-	// 		}		
-	// 	}
-    // }
+			}		
+		}
+    }
 </script>
 </body>
 </html>
