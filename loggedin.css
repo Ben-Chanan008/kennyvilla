@@ -41,8 +41,9 @@ header {
 	outline: none;
 }
 
-.searched .fa-grip-lines {
-	margin-left: 50px;
+.searched .fa-grip-lines:hover, .fa-magnifying-glass:hover {
+	/* margin-left: 50px; */	
+	cursor: pointer;
 }
 
 .sect > *:first-child {

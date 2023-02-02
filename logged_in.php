@@ -20,9 +20,9 @@
 		</div>
 	</header>
 	<section class="searched">
-		<i class="fas fa-magnifying-glass fa-2x"></i>
+		<i class="fas fa-magnifying-glass"></i>
 		<input type="search" name="search" id="search" placeholder="Search"/>
-		<i class="fa-sharp fa-solid fa-grip-lines fa-2x"></i>
+		<i class="fa-sharp fa-solid fa-grip-lines"></i>
 	</section>
 	<section class="sect">
 		<div>
@@ -121,19 +121,8 @@
 		</div>
 	</footer>
 	<script>
-		// const width = document.querySelector('.cards').clientWidth;
-		// const arr = [];
-		// let i = 0;
-		// let time = 3000;
-
-		// arr[0] = document.querySelector('.1');
-		// arr[1] = document.querySelector('.2');
-		// arr[2] = document.querySelector('.3');
-		// arr[3] = document.querySelector('.4');
-
-		// function changeItem(){
-			
-		// }
+		const width = document.querySelector('.cards').clientWidth;
+		
 	</script>
 </body>
 </html>
