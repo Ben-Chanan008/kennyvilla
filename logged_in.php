@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Welcome to Kenny villa</title>
 	<link rel="stylesheet" href="./loggedin.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+	<link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
 	<header>
@@ -97,31 +97,29 @@
 		</div>
 	</section>
 	<footer>
-		<div>
-			<i class="fa-solid fa-house"></i>
-			<span>Home</span>
+		<div class="links">
+			<nav>
+				<button><i class="fas fa-grip-lines fa-2x"></i></button>
+				<ul>
+					<li>Home</li>
+					<li>About</li>
+					<li>Works</li>
+					<li><a href="./profile.php">Profile</a></li>
+				</ul>
+			</nav>
 		</div>
-		<div>
-			<i class="fa-solid fa-house"></i>
-			<span>My Orders</span>
-		</div>
-		<div>
-			<i class="fa-solid fa-house"></i>
-			<span>Save</span>
-		</div>
-		<div>
-			<i class="fa-solid fa-house"></i>
-			<span>Chat Host</span>
-		</div>
-		<div>
-			<a href="./profile.php">
-				<i class="fa-solid fa-user"></i>
-				<span>Profile</span>
-			</a>
+		<div class="about">
+			<img src="./jlogoonly.png"/>
+			<p>Made by BENsla</p>
 		</div>
 	</footer>
 	<script>
 		const width = document.querySelector('.cards').clientWidth;
+		const container = document.querySelector('.cards');
+		const length = container.querySelectorAll('div');
+		
+		const font = document.querySelector('.fa-user-circle');
+		font.style.hover = font.innerHTML = ''
 		
 	</script>
 </body>

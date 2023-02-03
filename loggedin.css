@@ -9,6 +9,7 @@
 
 body{
 	overflow-x: hidden;
+	overflow-y: auto;
 }
 
 header {
@@ -108,15 +109,91 @@ header {
 	color: #ccc;
 }
 
+a[href*='profile']{
+	color: #fff;
+	text-decoration: none;
+}
+
 footer {
 	display: flex;
+	flex-direction: row;
 	background-color: #000;
 	min-height: 10vh;
+	justify-content: space-between;
+	align-items: center;
 	color: #fff;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 }
 
-footer > div{
-	margin: auto;
+footer img{
+	width: 100px;
+	height: 100px;
+}
+
+
+.links{
+	position: relative;
+	left: 30px;
+}
+
+.links ul{
+	position: absolute;
+	background-color: #fff;
+	color: #000;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-250px);
+}
+
+.links button{
+	background-color: transparent;
+	padding: 5px;
+	color: #fff;
+	border: none;
+}
+
+.links a{
+	color: #000;
+}
+
+.links button:hover{
+	cursor: pointer;
+}
+
+.links ul li{
+	padding: 10px;
+	list-style-type: circle;
+	/* border: none; */
+	color: #000;
+	transition: border .2s ease-in-out;
+	
+}
+
+/* .links ul li:last-of-type{
+	border: none;
+} */
+
+.links ul li:hover{
+	border-bottom:2px solid #000;
+	cursor: pointer;
+	font-weight: bolder;
+	transform: translateX(20px);
+	transition: transform .3s ease-in-out;
+}
+
+.links > nav button:focus  + ul{
+	opacity: 1;
+	pointer-events: all;
+	/* animation: slidein .3s ease-in-out; */
+}
+
+@keyframes slidein {
+	from{
+		transform: translateX(-100%);
+	}
+	to{
+		transform: translateX(0%);
+	}
 }

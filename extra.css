@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+body{
+    /* background-color: #000; */
+    font-family: 'lato', 'monospace';
+}
+
+.d-flex{
+    box-shadow: 10px 10px 10px #ccc;
+    background-color: #333;
+    color: #fff;
+    margin: 10px;
+    border-radius: 10px;
+}
