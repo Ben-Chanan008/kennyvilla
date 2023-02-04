@@ -104,7 +104,7 @@
 					<li>Home</li>
 					<li>About</li>
 					<li>Works</li>
-					<li><a href="./profile.php">Profile</a></li>
+					<li class="pro">Profile</li>
 				</ul>
 			</nav>
 		</div>
@@ -114,13 +114,10 @@
 		</div>
 	</footer>
 	<script>
-		const width = document.querySelector('.cards').clientWidth;
-		const container = document.querySelector('.cards');
-		const length = container.querySelectorAll('div');
-		
-		const font = document.querySelector('.fa-user-circle');
-		font.style.hover = font.innerHTML = ''
-		
+		const profile = document.querySelector('.pro');
+		profile.addEventListener('click', () => {
+			location.href = './profile.php';
+		});
 	</script>
 </body>
 </html>
