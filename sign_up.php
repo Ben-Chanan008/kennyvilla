@@ -1,7 +1,8 @@
 <?php
+include 'session.php';
+
 $nameErr = $emailErr = $passcodeErr = $loginErr = '';
 
-include 'database.php';
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_FULL_SPECIAL_CHARS);

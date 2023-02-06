@@ -119,7 +119,7 @@ footer {
 	flex-direction: row;
 	background-color: #000;
 	min-height: 10vh;
-	justify-content: space-between;
+	justify-content: space-evenly !important;
 	align-items: center;
 	color: #fff;
 	border-top-right-radius: 10px;

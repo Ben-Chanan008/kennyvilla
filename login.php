@@ -1,5 +1,5 @@
 <?php
-	include './database.php';
+	include 'session.php';
 	
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	$passcode = filter_input(INPUT_POST, 'passcode', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -11,10 +11,13 @@
 		// 	if($passcode->value === $re_passcode->value);
 		// }
 		if(empty($nameErr) && empty($emailErr) && empty($passcodeErr)){
-			$sql = "SELECT * FROM user WHERE username = '".$name."' AND password = '".$passcode."'";
-			$result = mysqli_query($conn, $sql);
+			$query = $conn->query("SELECT * FROM user WHERE username = '$name' AND password = '$passcode'");
 			
-			if(mysqli_num_rows($result) > 0){
+			if($query->num_rows) {
+				$user = $query->fetch_object();
+				
+				print_r($user);
+				$_SESSION['kennyvilla'] = $user->id;
 				header('Location: ./logged_in.php');
 			} else{
 				echo 'Error:'. mysqli_error($conn); 

@@ -1,3 +1,10 @@
+<?php
+include 'session.php';
+
+if (!$user)
+	echo '<meta http-equiv="refresh" content="0; login.php">'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +12,7 @@
 	<title>Welcome to Kenny villa</title>
 	<link rel="stylesheet" href="./loggedin.css">
 	<link rel="stylesheet" href="./css/all.css">
+	<link rel="stylesheet" href="./BOOSTRAP%20V5.30/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css">
 </head>
 <body>
 	<header>
@@ -104,9 +112,13 @@
 					<li>Home</li>
 					<li>About</li>
 					<li>Works</li>
-					<li class="pro">Profile</li>
+					<li>Profile</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="d-flex flex-column align-items-center mx-5">
+			<a href="profile.php"><i class="fa-solid fa-user fa-2x"></i></a>
+			<span>Profile</span>
 		</div>
 		<div class="about">
 			<img src="./jlogoonly.png"/>
